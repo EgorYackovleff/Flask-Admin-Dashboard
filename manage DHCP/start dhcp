@@ -1,0 +1,23 @@
+'/home/debi/Desktop/opendhcp/opendhcpd' -v -i '/home/debi/Desktop/opendhcp/opendhcp.ini' -s /opt/opendhcp/statefile -l /opt/opendhcp/open%Y%m%d.log
+
+сборка = g++ dhcpd.cpp -odhcpd -lpthread -lgcc_s
+
+sudo apt install nmap
+
+сканируем сеть:
+ nmap -sP 192.168.1.* | grep -v '^Nmap scan report for 1\|^Host'
+
+получаем следующий вывод:
+Starting Nmap 7.70 ( https://nmap.org ) at 2020-06-22 00:14 MSK
+Nmap scan report for router.asus.com (192.168.1.1)
+Nmap scan report for android-1b0e871acea51014 (192.168.1.45)
+Nmap scan report for iPhone (192.168.1.94)
+Nmap scan report for android-42bf582acc32fe2 (192.168.1.124)
+Nmap scan report for HPE30685 (192.168.1.141)
+Nmap scan report for OnePlus5 (192.168.1.143)
+Nmap scan report for DESKTOP-HDLSULE (192.168.1.175)
+Nmap scan report for Alex-PC (192.168.1.218)
+Nmap scan report for RE305 (192.168.1.219)
+Nmap scan report for android-5831fd898095cb90 (192.168.1.220)
+Nmap scan report for RedmiNote5-Redminot5 (192.168.1.247)
+Nmap done: 256 IP addresses (256 hosts up) scanned in 16.95 seconds

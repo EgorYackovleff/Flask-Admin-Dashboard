@@ -1,14 +1,15 @@
 #!venv/bin/python
 import os
-from flask import Flask, url_for, redirect, render_template, request, abort
-from flask_sqlalchemy import SQLAlchemy
-from flask_security import Security, SQLAlchemyUserDatastore, \
-    UserMixin, RoleMixin, login_required, current_user
-from flask_security.utils import encrypt_password
+
 import flask_admin
-from flask_admin.contrib import sqla
-from flask_admin import helpers as admin_helpers
+from flask import Flask, url_for, redirect, render_template, request, abort
 from flask_admin import BaseView, expose
+from flask_admin import helpers as admin_helpers
+from flask_admin.contrib import sqla
+from flask_security import Security, SQLAlchemyUserDatastore, \
+     UserMixin, RoleMixin, current_user
+from flask_security.utils import encrypt_password
+from flask_sqlalchemy import SQLAlchemy
 
 # Create Flask application
 app = Flask(__name__)
@@ -107,7 +108,7 @@ def index():
 # Create admin
 admin = flask_admin.Admin(
     app,
-    'My Dashboard',
+    'DHCP-Server',
     base_template='my_master.html',
     template_mode='bootstrap3',
 )
